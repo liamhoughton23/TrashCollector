@@ -15,6 +15,7 @@ namespace TrashWebsite.Models
         public string ZipCode { get; set; }
         public string VacationDates { get; set; }
         public string PickUpDates { get; set; }
+        public string Role { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
@@ -42,6 +43,5 @@ namespace TrashWebsite.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<TrashWebsite.Models.RoleViewModel> RoleViewModels { get; set; }
     }
 }

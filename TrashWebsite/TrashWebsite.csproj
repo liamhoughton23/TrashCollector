@@ -222,6 +222,14 @@
     <Compile Include="Migrations\201802071635426_roles3.Designer.cs">
       <DependentUpon>201802071635426_roles3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802071737510_added role.cs" />
+    <Compile Include="Migrations\201802071737510_added role.Designer.cs">
+      <DependentUpon>201802071737510_added role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802071750171_deleted something.cs" />
+    <Compile Include="Migrations\201802071750171_deleted something.Designer.cs">
+      <DependentUpon>201802071750171_deleted something.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -316,6 +324,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802071635426_roles3.resx">
       <DependentUpon>201802071635426_roles3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802071737510_added role.resx">
+      <DependentUpon>201802071737510_added role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802071750171_deleted something.resx">
+      <DependentUpon>201802071750171_deleted something.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
