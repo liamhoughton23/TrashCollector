@@ -1,5 +1,8 @@
-﻿using Microsoft.Owin;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin;
 using Owin;
+using TrashWebsite.Models;
 
 [assembly: OwinStartupAttribute(typeof(TrashWebsite.Startup))]
 namespace TrashWebsite
@@ -10,5 +13,6 @@ namespace TrashWebsite
         {
             ConfigureAuth(app);
         }
+
     }
 }

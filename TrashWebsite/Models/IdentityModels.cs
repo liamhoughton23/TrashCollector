@@ -24,6 +24,11 @@ namespace TrashWebsite.Models
             return userIdentity;
         }
     }
+    public class ApplicationRole : IdentityRole
+    {
+        public ApplicationRole() : base() { }
+        public ApplicationRole(string roleName) : base(roleName) { }
+    }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -36,5 +41,7 @@ namespace TrashWebsite.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<TrashWebsite.Models.RoleViewModel> RoleViewModels { get; set; }
     }
 }
