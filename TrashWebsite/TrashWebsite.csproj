@@ -231,6 +231,10 @@
     <Compile Include="Migrations\201802082010010_took away foreign key.Designer.cs">
       <DependentUpon>201802082010010_took away foreign key.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802082325011_finally added foreign key.cs" />
+    <Compile Include="Migrations\201802082325011_finally added foreign key.Designer.cs">
+      <DependentUpon>201802082325011_finally added foreign key.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CustomerPickup.cs" />
@@ -344,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802082010010_took away foreign key.resx">
       <DependentUpon>201802082010010_took away foreign key.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802082325011_finally added foreign key.resx">
+      <DependentUpon>201802082325011_finally added foreign key.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
