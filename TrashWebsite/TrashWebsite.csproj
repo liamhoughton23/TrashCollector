@@ -196,48 +196,32 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\CustomerPickupsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802070329016_First add.cs" />
-    <Compile Include="Migrations\201802070329016_First add.Designer.cs">
-      <DependentUpon>201802070329016_First add.cs</DependentUpon>
+    <Compile Include="Migrations\201802081608083_added customer table.cs" />
+    <Compile Include="Migrations\201802081608083_added customer table.Designer.cs">
+      <DependentUpon>201802081608083_added customer table.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802071606152_role.cs" />
-    <Compile Include="Migrations\201802071606152_role.Designer.cs">
-      <DependentUpon>201802071606152_role.cs</DependentUpon>
+    <Compile Include="Migrations\201802081617318_no more foreign key.cs" />
+    <Compile Include="Migrations\201802081617318_no more foreign key.Designer.cs">
+      <DependentUpon>201802081617318_no more foreign key.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802071624580_roles.cs" />
-    <Compile Include="Migrations\201802071624580_roles.Designer.cs">
-      <DependentUpon>201802071624580_roles.cs</DependentUpon>
+    <Compile Include="Migrations\201802081633156_switched role.cs" />
+    <Compile Include="Migrations\201802081633156_switched role.Designer.cs">
+      <DependentUpon>201802081633156_switched role.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802071628201_roles2.cs" />
-    <Compile Include="Migrations\201802071628201_roles2.Designer.cs">
-      <DependentUpon>201802071628201_roles2.cs</DependentUpon>
+    <Compile Include="Migrations\201802081713130_deleted debt.cs" />
+    <Compile Include="Migrations\201802081713130_deleted debt.Designer.cs">
+      <DependentUpon>201802081713130_deleted debt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802071635426_roles3.cs" />
-    <Compile Include="Migrations\201802071635426_roles3.Designer.cs">
-      <DependentUpon>201802071635426_roles3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802071737510_added role.cs" />
-    <Compile Include="Migrations\201802071737510_added role.Designer.cs">
-      <DependentUpon>201802071737510_added role.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802071750171_deleted something.cs" />
-    <Compile Include="Migrations\201802071750171_deleted something.Designer.cs">
-      <DependentUpon>201802071750171_deleted something.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802072326303_added dayofweek.cs" />
-    <Compile Include="Migrations\201802072326303_added dayofweek.Designer.cs">
-      <DependentUpon>201802072326303_added dayofweek.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802080135204_added customer db.cs" />
-    <Compile Include="Migrations\201802080135204_added customer db.Designer.cs">
-      <DependentUpon>201802080135204_added customer db.cs</DependentUpon>
+    <Compile Include="Migrations\201802081738418_got the fucking foreign key.cs" />
+    <Compile Include="Migrations\201802081738418_got the fucking foreign key.Designer.cs">
+      <DependentUpon>201802081738418_got the fucking foreign key.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -313,8 +297,12 @@
     <Content Include="Views\Role\Edit.cshtml" />
     <Content Include="Views\Role\Details.cshtml" />
     <Content Include="Views\Role\Delete.cshtml" />
-    <Content Include="Views\Customer\CustomerHome.cshtml" />
-    <Content Include="Views\Customer\EditInfo.cshtml" />
+    <Content Include="Views\CustomerPickups\Create.cshtml" />
+    <Content Include="Views\CustomerPickups\Delete.cshtml" />
+    <Content Include="Views\CustomerPickups\Details.cshtml" />
+    <Content Include="Views\CustomerPickups\Edit.cshtml" />
+    <Content Include="Views\CustomerPickups\Index.cshtml" />
+    <Content Include="Views\CustomerPickups\CustomerHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -328,26 +316,20 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802070329016_First add.resx">
-      <DependentUpon>201802070329016_First add.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802081608083_added customer table.resx">
+      <DependentUpon>201802081608083_added customer table.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802071628201_roles2.resx">
-      <DependentUpon>201802071628201_roles2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802081617318_no more foreign key.resx">
+      <DependentUpon>201802081617318_no more foreign key.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802071635426_roles3.resx">
-      <DependentUpon>201802071635426_roles3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802081633156_switched role.resx">
+      <DependentUpon>201802081633156_switched role.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802071737510_added role.resx">
-      <DependentUpon>201802071737510_added role.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802081713130_deleted debt.resx">
+      <DependentUpon>201802081713130_deleted debt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802071750171_deleted something.resx">
-      <DependentUpon>201802071750171_deleted something.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802072326303_added dayofweek.resx">
-      <DependentUpon>201802072326303_added dayofweek.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802080135204_added customer db.resx">
-      <DependentUpon>201802080135204_added customer db.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802081738418_got the fucking foreign key.resx">
+      <DependentUpon>201802081738418_got the fucking foreign key.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

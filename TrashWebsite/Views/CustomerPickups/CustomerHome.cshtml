@@ -1,8 +1,15 @@
-﻿
+﻿@model TrashWebsite.Models.CustomerPickup
 @{
     ViewBag.Title = "CustomerHome";
 }
 
+<h2>CustomerHome</h2>
+@{
+    ViewBag.Title = "CustomerHome";
+}
+
+@using (Html.BeginForm())
+{
 <h2>CustomerHome</h2>
 <div class="jumbotron">
     <h1>Welcome to Getter Garbage Gang</h1>
@@ -30,5 +37,4 @@
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Change Vacation &raquo;</a></p>
     </div>
 </div>
-
-
+}

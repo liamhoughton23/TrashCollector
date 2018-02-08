@@ -7,13 +7,13 @@ namespace TrashWebsite.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class role : IMigrationMetadata
+    public sealed partial class addedcustomertable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(role));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedcustomertable));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802071606152_role"; }
+            get { return "201802081608083_added customer table"; }
         }
         
         string IMigrationMetadata.Source

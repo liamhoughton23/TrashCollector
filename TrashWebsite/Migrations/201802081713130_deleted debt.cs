@@ -3,16 +3,16 @@ namespace TrashWebsite.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class role : DbMigration
+    public partial class deleteddebt : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.AspNetRoles", "Discriminator", c => c.String(nullable: false, maxLength: 128));
+            DropColumn("dbo.CustomerPickups", "Debt");
         }
         
         public override void Down()
         {
-            DropColumn("dbo.AspNetRoles", "Discriminator");
+            AddColumn("dbo.CustomerPickups", "Debt", c => c.String());
         }
     }
 }

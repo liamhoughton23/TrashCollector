@@ -7,13 +7,13 @@ namespace TrashWebsite.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class roles : IMigrationMetadata
+    public sealed partial class deleteddebt : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(roles));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(deleteddebt));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802071624580_roles"; }
+            get { return "201802081713130_deleted debt"; }
         }
         
         string IMigrationMetadata.Source
