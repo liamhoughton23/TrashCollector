@@ -1,15 +1,12 @@
 ﻿@model TrashWebsite.Models.CustomerPickup
-@{
-    ViewBag.Title = "CustomerHome";
-}
 
-<h2>CustomerHome</h2>
 @{
     ViewBag.Title = "CustomerHome";
 }
 
 @using (Html.BeginForm())
 {
+
 <h2>CustomerHome</h2>
 <div class="jumbotron">
     <h1>Welcome to Getter Garbage Gang</h1>
@@ -24,7 +21,7 @@
             enables a clean separation of concerns and gives you full control over markup
             for enjoyable, agile development.
         </p>
-        <p><a class="btn btn-default" href="EditInfo">Change Day &raquo;</a></p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.PrimaryId})
     </div>
     <div class="col-md-4">
         <h2>Debt Tracker</h2>

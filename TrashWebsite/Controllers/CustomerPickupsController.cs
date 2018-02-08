@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using TrashWebsite.Models;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace TrashWebsite.Controllers
 {
@@ -18,7 +19,7 @@ namespace TrashWebsite.Controllers
         // GET: CustomerPickups
         public ActionResult Index()
         {
-            var customerPickups = db.Customer.Include(c => c.Id);
+            var customerPickups = db.Customer.Include(c => c.UserId);
             return View(customerPickups.ToList());
         }
 
@@ -53,14 +54,14 @@ namespace TrashWebsite.Controllers
         {
             if (ModelState.IsValid)
             {
-                customerPickup.TableId = User.Identity.GetUserId();
+                customerPickup.UserId = User.Identity.GetUserId();
                 db.Customer.Add(customerPickup);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("CustomerHome", "CustomerPickups");
             }
 
-            ViewBag.Id = new SelectList(db.Users, "Id", "FirstName", customerPickup.Id);
-            return View(customerPickup);
+           ViewBag.Id = new SelectList(db.Users, "Id", "FirstName", customerPickup.UserId);
+           return View(customerPickup);
         }
 
         // GET: CustomerPickups/Edit/5
@@ -75,7 +76,7 @@ namespace TrashWebsite.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.Id = new SelectList(db.Users, "Id", "FirstName", customerPickup.Id);
+            ViewBag.Id = new SelectList(db.Users, "Id", "FirstName", customerPickup.UserId);
             return View(customerPickup);
         }
 
@@ -84,16 +85,16 @@ namespace TrashWebsite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PrimaryId,Id,Address,ZipCode,VacationDates,PickUpDay")] CustomerPickup customerPickup)
+        public ActionResult Edit([Bind(Include = "PrimaryId,UserId,FirstName,LastName,Address,ZipCode,VacationDates,PickUpDay")] CustomerPickup customerPickup)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(customerPickup).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("CustomerHome", "CustomerPickups");
             }
-            ViewBag.Id = new SelectList(db.Users, "Id", "FirstName", customerPickup.Id);
-            return View("CustomerHome", "CustomerPickups");
+            ViewBag.Id = new SelectList(db.Users, "Id", "FirstName", customerPickup.UserId);
+            return View("Edit", "CustomerPickups");
         }
 
         // GET: CustomerPickups/Delete/5
@@ -132,7 +133,10 @@ namespace TrashWebsite.Controllers
         }
         public ActionResult CustomerHome()
         {
-            return View();
+            //find pickup pass in to view
+            string sameUser = User.Identity.GetUserId();
+            var result = from row in db.Customer where row.UserId == sameUser select row;
+            return View(result.FirstOrDefault());
         }
     }
 }

@@ -12,10 +12,8 @@ namespace TrashWebsite.Models
     {
             [Key]
             public int PrimaryId { get; set; }
-
-            [ForeignKey("Id")]
-            public string TableId { get; set; }
-            public virtual ApplicationUser Id { get; set; }
+            public string UserId { get; set; }
+            public virtual ApplicationUser User { get; set; }
 
             [Required]
             [Display(Name = "First Name")]
