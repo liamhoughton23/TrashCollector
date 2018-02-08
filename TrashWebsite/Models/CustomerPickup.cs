@@ -9,8 +9,15 @@ namespace TrashWebsite.Models
 {
     public class CustomerPickup
     {
+
+
+            [Key]
+            public int PrimaryId { get; set; }
+            
+            public string Id { get; set; }
+
             [ForeignKey("Id")]
-            public string TableId { get; set; }
+            public ApplicationUser TableId { get; set; }
 
             [Required]
             [Display(Name = "Address")]
