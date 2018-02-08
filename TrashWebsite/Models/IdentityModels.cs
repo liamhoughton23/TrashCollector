@@ -42,6 +42,7 @@ namespace TrashWebsite.Models
         {
             return new ApplicationDbContext();
         }
+        DbSet<Models.CustomerPickup> Customer { get; set; }
 
     }
 }

@@ -19,6 +19,7 @@ namespace TrashWebsite.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
         private ApplicationRoleManager _roleManager;
+        //private ApplicationDbContext _db;
         public AccountController()
         {
         }
@@ -93,7 +94,7 @@ namespace TrashWebsite.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("CustomerHome", "Customer");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -239,6 +240,22 @@ namespace TrashWebsite.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
+        [HttpPost]
+
+        //public async Task<ActionResult> EditInfo(CustomerPickup model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+        //        user.Address = model.Address;
+        //        user.ZipCode = model.ZipCode;
+        //        user.VacationDates = model.VacationDates;
+        //        user.PickUpDates = model.PickUpDay;
+        //        _db.SaveChanges();
+        //        return RedirectToAction("CustomerHome", "Customer");
+        //    }
+        //    return RedirectToAction("CustomerHome", "Customer");
+        //}
 
         //
         // GET: /Account/ForgotPasswordConfirmation
