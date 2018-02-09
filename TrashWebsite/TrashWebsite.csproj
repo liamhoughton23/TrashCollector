@@ -197,6 +197,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomerPickupsController.cs" />
+    <Compile Include="Controllers\EmployeeModelsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
@@ -235,9 +236,14 @@
     <Compile Include="Migrations\201802082325011_finally added foreign key.Designer.cs">
       <DependentUpon>201802082325011_finally added foreign key.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802090032426_added employee table.cs" />
+    <Compile Include="Migrations\201802090032426_added employee table.Designer.cs">
+      <DependentUpon>201802090032426_added employee table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CustomerPickup.cs" />
+    <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
@@ -315,6 +321,12 @@
     <Content Include="Views\CustomerPickups\Edit.cshtml" />
     <Content Include="Views\CustomerPickups\Index.cshtml" />
     <Content Include="Views\CustomerPickups\CustomerHome.cshtml" />
+    <Content Include="Views\EmployeeModels\Create.cshtml" />
+    <Content Include="Views\EmployeeModels\Delete.cshtml" />
+    <Content Include="Views\EmployeeModels\Details.cshtml" />
+    <Content Include="Views\EmployeeModels\Edit.cshtml" />
+    <Content Include="Views\EmployeeModels\Index.cshtml" />
+    <Content Include="Views\EmployeeModels\EmployeeHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -351,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802082325011_finally added foreign key.resx">
       <DependentUpon>201802082325011_finally added foreign key.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802090032426_added employee table.resx">
+      <DependentUpon>201802090032426_added employee table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -138,5 +138,7 @@ namespace TrashWebsite.Controllers
             var result = from row in db.Customer where row.UserId == sameUser select row;
             return View(result.FirstOrDefault());
         }
+
+
     }
 }

@@ -36,6 +36,6 @@ namespace TrashWebsite.Models
         }
         public DbSet<CustomerPickup> Customer { get; set; }
 
-
+        public System.Data.Entity.DbSet<TrashWebsite.Models.EmployeeModel> EmployeeModels { get; set; }
     }
 }

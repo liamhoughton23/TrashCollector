@@ -83,6 +83,7 @@ namespace TrashWebsite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
+           
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -94,7 +95,11 @@ namespace TrashWebsite.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToAction("CustomerHome", "CustomerPickups");
+                    //if(model1.RoleName == "Customer")
+                    //{
+                        return RedirectToAction("CustomerHome", "CustomerPickups");
+                    //}
+                    return RedirectToAction("EmployeeHome", "EmployeeModels");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -183,7 +188,11 @@ namespace TrashWebsite.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Create", "CustomerPickups");
+                    if(model.RoleName == "Customer")
+                    {
+                        return RedirectToAction("Create", "CustomerPickups");
+                    }
+                    return RedirectToAction("Create", "EmployeeModels");
                 }
                 AddErrors(result);
             }
