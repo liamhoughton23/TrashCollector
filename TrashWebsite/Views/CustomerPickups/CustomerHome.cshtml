@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TrashWebsite.Models.CustomerPickup>
+﻿@model TrashWebsite.Models.CustomerPickup
 
 @{
     ViewBag.Title = "CustomerHome";
@@ -14,24 +14,22 @@
 </div>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
         <h2>Change Pick Up Day</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            You can also change your address and zip in case you move. Feel free to leave the vacation days empty if you don't do that kind of stuff.
         </p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.PrimaryId})
+        @Html.ActionLink("Edit", "Edit", new { id = Model.PrimaryId }) 
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
         <h2>Debt Tracker</h2>
         <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="">Get Debt &raquo;</a></p>
     </div>
-    <div class="col-md-4">
+    @*<div class="col-md-4">
         <h2>Set Vacation</h2>
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
         <p><a class="btn btn-default" href="Index">Change Vacation &raquo;</a></p>
     </div>
-</div>
+</div>*@
+    </div>
 }

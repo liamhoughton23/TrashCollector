@@ -99,7 +99,7 @@ namespace TrashWebsite.Controllers
                     //{
                         return RedirectToAction("CustomerHome", "CustomerPickups");
                     //}
-                    return RedirectToAction("EmployeeHome", "EmployeeModels");
+                    //return RedirectToAction("EmployeeHome", "EmployeeModels");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:

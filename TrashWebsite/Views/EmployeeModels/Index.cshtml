@@ -1,4 +1,5 @@
-﻿@model IEnumerable<TrashWebsite.Models.CustomerPickup>
+﻿@model IEnumerable<TrashWebsite.Models.EmployeeModel>
+
 @{
     ViewBag.Title = "Index";
 }
@@ -11,47 +12,22 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.ZipCode)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VacationDates)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PickUpDay)
         </th>
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ZipCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VacationDates)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PickUpDay)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.PrimaryId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.PrimaryId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.PrimaryId })
-            </td>
-        </tr>
-    }
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZipCode)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
 
 </table>

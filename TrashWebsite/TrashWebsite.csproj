@@ -240,6 +240,19 @@
     <Compile Include="Migrations\201802090032426_added employee table.Designer.cs">
       <DependentUpon>201802090032426_added employee table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802091532581_added employee.cs" />
+    <Compile Include="Migrations\201802091541110_changed stuff.cs" />
+    <Compile Include="Migrations\201802091541110_changed stuff.Designer.cs">
+      <DependentUpon>201802091541110_changed stuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802091553134_added stuff.cs" />
+    <Compile Include="Migrations\201802091553134_added stuff.Designer.cs">
+      <DependentUpon>201802091553134_added stuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802091649478_added foreign key.cs" />
+    <Compile Include="Migrations\201802091649478_added foreign key.Designer.cs">
+      <DependentUpon>201802091649478_added foreign key.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CustomerPickup.cs" />
@@ -366,6 +379,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802090032426_added employee table.resx">
       <DependentUpon>201802090032426_added employee table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802091541110_changed stuff.resx">
+      <DependentUpon>201802091541110_changed stuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802091553134_added stuff.resx">
+      <DependentUpon>201802091553134_added stuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802091649478_added foreign key.resx">
+      <DependentUpon>201802091649478_added foreign key.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

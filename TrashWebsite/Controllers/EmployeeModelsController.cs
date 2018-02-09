@@ -17,7 +17,8 @@ namespace TrashWebsite.Controllers
         // GET: EmployeeModels
         public ActionResult Index()
         {
-            return View(db.EmployeeModels.ToList());
+            
+            return View(db.Employee.ToList());
         }
 
         // GET: EmployeeModels/Details/5
@@ -27,7 +28,7 @@ namespace TrashWebsite.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EmployeeModel employeeModel = db.EmployeeModels.Find(id);
+            EmployeeModel employeeModel = db.Employee.Find(id);
             if (employeeModel == null)
             {
                 return HttpNotFound();
@@ -50,7 +51,7 @@ namespace TrashWebsite.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.EmployeeModels.Add(employeeModel);
+                db.Employee.Add(employeeModel);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +66,7 @@ namespace TrashWebsite.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EmployeeModel employeeModel = db.EmployeeModels.Find(id);
+            EmployeeModel employeeModel = db.Employee.Find(id);
             if (employeeModel == null)
             {
                 return HttpNotFound();
@@ -96,7 +97,7 @@ namespace TrashWebsite.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EmployeeModel employeeModel = db.EmployeeModels.Find(id);
+            EmployeeModel employeeModel = db.Employee.Find(id);
             if (employeeModel == null)
             {
                 return HttpNotFound();
@@ -109,8 +110,8 @@ namespace TrashWebsite.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            EmployeeModel employeeModel = db.EmployeeModels.Find(id);
-            db.EmployeeModels.Remove(employeeModel);
+            EmployeeModel employeeModel = db.Employee.Find(id);
+            db.Employee.Remove(employeeModel);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
