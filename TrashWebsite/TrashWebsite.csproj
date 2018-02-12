@@ -253,6 +253,10 @@
     <Compile Include="Migrations\201802091649478_added foreign key.Designer.cs">
       <DependentUpon>201802091649478_added foreign key.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802120434326_back to working.cs" />
+    <Compile Include="Migrations\201802120434326_back to working.Designer.cs">
+      <DependentUpon>201802120434326_back to working.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CustomerPickup.cs" />
@@ -264,6 +268,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\boostrap-lumens.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -388,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802091649478_added foreign key.resx">
       <DependentUpon>201802091649478_added foreign key.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802120434326_back to working.resx">
+      <DependentUpon>201802120434326_back to working.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -37,7 +37,7 @@ namespace TrashWebsite.Models
 
             [Required]
             [Display(Name = "Pick Up Day")]
-            public DayOfWeek PickUpDay { get; set; }
+            public string PickUpDay { get; set; }
 
 
     }
